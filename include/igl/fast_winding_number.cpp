@@ -164,6 +164,13 @@ IGL_INLINE void igl::fast_winding_number(
     if(loc_norm == 0)
     {
       return 0.5;
+    }else if{
+      loc_norm < EPSILON
+      // 如果loc_norm小于epsilon，则将loc拉伸到epsilon
+      for(int i = 0; i < 3; i++)
+      {
+        loc(i) = loc(i) / loc_norm * EPSILON;
+      }
     }else
     {
       return (loc(0)*anorm(0)+loc(1)*anorm(1)+loc(2)*anorm(2))

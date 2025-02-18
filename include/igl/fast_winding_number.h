@@ -6,6 +6,12 @@
 #include <vector>
 namespace igl
 {
+  // 在公式中增加一个epsilon
+  #define EPSILON 1e-6
+
+
+
+
   /// Generate the precomputation for the fast winding number for point data
   /// [Barill et. al 2018].
   ///
