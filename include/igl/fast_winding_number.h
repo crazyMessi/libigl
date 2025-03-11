@@ -96,6 +96,7 @@ namespace igl
     const Eigen::MatrixBase<DerivedEC>& EC,
     const Eigen::MatrixBase<DerivedQ>& Q,
     const BetaType beta,
+    const typename DerivedP::Scalar epsilon,
     Eigen::PlainObjectBase<DerivedWN>& WN);
   /// \overload
   ///
@@ -115,6 +116,7 @@ namespace igl
     const Eigen::MatrixBase<DerivedQ>& Q,
     const int expansion_order,
     const BetaType beta,
+    const typename DerivedP::Scalar epsilon,
     Eigen::PlainObjectBase<DerivedWN>& WN);
   /// \overload
   template <
