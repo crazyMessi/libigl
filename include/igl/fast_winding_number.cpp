@@ -166,9 +166,8 @@ IGL_INLINE void igl::fast_winding_number(
       return 0.5;
     }else
     {
-      loc_norm += 1e-6;
       return (loc(0)*anorm(0)+loc(1)*anorm(1)+loc(2)*anorm(2))
-                                  /(PI_4*(loc_norm*loc_norm*loc_norm));
+                                  /(PI_4*((loc_norm+1e-5)*(loc_norm+1e-5)*(loc_norm+1e-5)));
     }
   };
 
